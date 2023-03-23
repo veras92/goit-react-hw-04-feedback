@@ -1,22 +1,23 @@
 import PropTypes from 'prop-types';
-import React, { Component } from 'react';
+import React from 'react';
 
-class Statistics extends Component {
-  render() {
-    const { goodCount, neutralCount, badCount, total, positivePercentage } =
-      this.props;
-
-    return (
-      <>
-        <p> Good: {goodCount}</p>
-        <p> Neutral: {neutralCount}</p>
-        <p> Bad: {badCount}</p>
-        <p> Total: {total}</p>
-        <p> Positive feedback: {positivePercentage}%</p>
-      </>
-    );
-  }
-}
+const Statistics = ({
+  goodCount,
+  neutralCount,
+  badCount,
+  total,
+  positivePercentage,
+}) => {
+  return (
+    <>
+      <p> Good: {goodCount}</p>
+      <p> Neutral: {neutralCount}</p>
+      <p> Bad: {badCount}</p>
+      <p> Total: {total}</p>
+      <p> Positive feedback: {positivePercentage}%</p>
+    </>
+  );
+};
 
 Statistics.propTypes = {
   goodCount: PropTypes.number.isRequired,

@@ -1,20 +1,16 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 
-class Section extends Component {
-  render() {
-    const { title } = this.props;
+const Section = ({ title, children }) => {
+  return (
+    <div>
+      <h2>{title}</h2>
+      <div>{children}</div>
+    </div>
+  );
+};
 
-    return (
-      <div>
-        <h2>{title}</h2>
-        <div>{this.props.children}</div>
-      </div>
-    );
-  }
-}
-
-Section.protoTypes = {
+Section.propTypes = {
   title: PropTypes.string.isRequired,
 };
 
